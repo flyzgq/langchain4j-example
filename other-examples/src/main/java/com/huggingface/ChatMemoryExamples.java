@@ -1,3 +1,5 @@
+package com.huggingface;
+
 import dev.langchain4j.chain.ConversationalChain;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.UserMessage;
@@ -28,10 +30,8 @@ public class ChatMemoryExamples {
 
         public static void main(String[] args) {
 
-            String apiKey = System.getenv("OPENAI_API_KEY"); // https://platform.openai.com/account/api-keys
-
             Chat chat = AiServices.builder(Chat.class)
-                    .chatLanguageModel(OpenAiChatModel.withApiKey(apiKey))
+                    .chatLanguageModel(ChatModelFactory.buildHuggingFaceChatModel())
                     .chatMemory(MessageWindowChatMemory.withCapacity(10))
                     .build();
 
@@ -48,13 +48,10 @@ public class ChatMemoryExamples {
         public static void main(String[] args) throws IOException {
 
             ConversationalChain chain = ConversationalChain.builder()
-                    .chatLanguageModel(OpenAiChatModel.builder()
-                            .modelName(GPT_3_5_TURBO)
-                            .apiKey(System.getenv("OPENAI_API_KEY")) // https://platform.openai.com/account/api-keys
-                            .build())
+                    .chatLanguageModel(ChatModelFactory.buildHuggingFaceChatModel())
                     .chatMemory(MessageWindowChatMemory.builder()
                             .systemMessage("You are a helpful assistant.")
-                            .capacityInMessages(7)
+                            .capacityInMessages(1000)
                             .build())
                     .build();
 

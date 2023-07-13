@@ -1,3 +1,5 @@
+package com.openai;
+
 import dev.langchain4j.chain.ConversationalRetrievalChain;
 import dev.langchain4j.data.document.Document;
 import dev.langchain4j.data.document.DocumentLoader;
@@ -34,7 +36,7 @@ import static java.util.stream.Collectors.joining;
 
 public class ChatWithDocumentsExamples {
 
-    // Please also check ServiceWithRetrieverExample
+    // Please also check com.huggingface.ServiceWithRetrieverExample
 
     static class IfYouNeedSimplicity {
 

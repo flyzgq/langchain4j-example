@@ -1,3 +1,5 @@
+package com.openai;
+
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 

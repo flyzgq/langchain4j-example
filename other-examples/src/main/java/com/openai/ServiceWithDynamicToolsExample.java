@@ -1,3 +1,5 @@
+package com.openai;
+
 import dev.langchain4j.code.Judge0JavaScriptExecutionTool;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.ChatLanguageModel;

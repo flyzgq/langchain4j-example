@@ -1,3 +1,5 @@
+package com.openai;
+
 import dev.langchain4j.data.message.ChatMessage;
 import dev.langchain4j.model.StreamingResultHandler;
 import dev.langchain4j.model.chat.StreamingChatLanguageModel;

@@ -1,3 +1,5 @@
+package com.openai;
+
 import dev.langchain4j.model.input.Prompt;
 import dev.langchain4j.model.input.PromptTemplate;
 
