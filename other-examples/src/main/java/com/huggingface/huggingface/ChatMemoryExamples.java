@@ -1,4 +1,4 @@
-package com.huggingface;
+package com.huggingface.huggingface;
 
 import dev.langchain4j.chain.ConversationalChain;
 import dev.langchain4j.data.message.AiMessage;

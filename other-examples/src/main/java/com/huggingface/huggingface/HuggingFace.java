@@ -1,4 +1,4 @@
-package com.huggingface;
+package com.huggingface.huggingface;
 
 import lombok.Builder;
 import lombok.Getter;
